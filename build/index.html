@@ -53,6 +53,20 @@
       href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap"
       rel="stylesheet"
     />
+    <style>
+      #hovering {
+        background: linear-gradient(
+          315deg,
+          hsla(358, 85%, 52%, 1) 0%,
+          hsla(357, 75%, 56%, 1) 100%
+        );
+        transition: all 0.2s;
+      }
+
+      #hovering:hover {
+        background: linear-gradient(315deg, #050517, #050517);
+      }
+    </style>
   </head>
   <body>
     <nav
@@ -113,7 +127,8 @@
       >
         <button class="rounded-2xl cursor-default">
           <div
-            class="h-6 flex flex-row items-center font-navfont bg-red hover:bg-blue collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
           >
             <img
               class="collection:h-6 object-cover h-10"
@@ -125,7 +140,8 @@
 
         <button class="rounded-2xl cursor-default">
           <div
-            class="h-6 flex flex-row items-center font-navfont bg-red hover:bg-blue collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
           >
             <img
               class="collection:h-6 object-cover h-10"
@@ -136,7 +152,8 @@
         </button>
         <button class="rounded-2xl cursor-default">
           <div
-            class="h-6 flex flex-row items-center font-navfont bg-red hover:bg-blue collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
           >
             <img
               class="collection:h-6 object-cover h-10"
@@ -147,7 +164,8 @@
         </button>
         <button class="rounded-2xl cursor-default">
           <div
-            class="h-6 flex flex-row items-center font-navfont bg-red hover:bg-blue collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
           >
             <img
               class="collection:h-6 object-cover h-10"
@@ -158,7 +176,8 @@
         </button>
         <button class="rounded-2xl cursor-default">
           <div
-            class="h-6 flex flex-row items-center font-navfont bg-red hover:bg-blue collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
           >
             <img
               class="collection:h-6 object-cover h-10"
@@ -169,7 +188,8 @@
         </button>
         <button class="rounded-2xl cursor-default">
           <div
-            class="h-6 flex flex-row items-center font-navfont bg-red hover:bg-blue collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
           >
             <img
               class="collection:h-6 object-cover h-10"
@@ -180,19 +200,23 @@
         </button>
       </div>
       <div
-        class="w-screen bg-red flex flex-col items-center px-2 justify-center"
+        class="flex flex-col items-center px-2 py-4 justify-center"
+        style="
+          background: linear-gradient(
+            315deg,
+            hsla(358, 85%, 52%, 1) 0%,
+            hsla(357, 75%, 56%, 1) 100%
+          );
+        "
       >
-        <div class="w-[95%]">
-          <h2 class="font-favboxfont text-kerem py-3 self-start text-xl">
-            Arrivals:
-          </h2>
-        </div>
         <div
           class="grid grid-cols-1 grid-rows-4 gap-4 w-[95%] place-content-center"
         >
-          <div class="flex flex-row justify-start items-center relative">
+          <div
+            class="flex flex-row justify-start items-center relative group overflow-hidden rounded-lg"
+          >
             <img
-              class="w-full h-16 object-[0px,-28px] object-cover brightness-75 rounded-lg"
+              class="w-full h-16 object-[0px,-28px] object-cover brightness-75 transform blur-[0.35px] group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
               src="./images/arriv1.jpg"
             />
             <p
@@ -201,9 +225,11 @@
               2023 Arrival
             </p>
           </div>
-          <div class="flex flex-row justify-start items-center relative">
+          <div
+            class="flex flex-row justify-start items-center relative group overflow-hidden rounded-lg"
+          >
             <img
-              class="w-full h-16 object-[0px,-30px] object-cover brightness-75 rounded-lg"
+              class="w-full h-16 object-[0px,-30px] object-cover brightness-75 transform blur-[0.35px] group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
               src="./images/arriv2.jpg"
             />
             <p
@@ -212,9 +238,11 @@
               2022 Arrival
             </p>
           </div>
-          <div class="flex flex-row justify-start items-center relative">
+          <div
+            class="flex flex-row justify-start items-center relative group overflow-hidden rounded-lg"
+          >
             <img
-              class="w-full h-16 object-[0px,-68px] object-cover brightness-75 rounded-lg"
+              class="w-full h-16 object-[0px,-68px] object-cover brightness-75 transform blur-[0.35px] group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
               src="./images/arriv3.jpg"
             />
             <p
@@ -223,9 +251,11 @@
               2021 Arrival
             </p>
           </div>
-          <div class="flex flex-row justify-start items-center relative">
+          <div
+            class="flex flex-row justify-start items-center relative group overflow-hidden rounded-lg"
+          >
             <img
-              class="w-full h-16 object-[0px,-43px] object-cover brightness-75 rounded-lg"
+              class="w-full h-16 object-[0px,-43px] object-cover brightness-75 transform blur-[0.35px] group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
               src="./images/arriv4.jpg"
             />
             <p
