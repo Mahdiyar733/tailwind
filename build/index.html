@@ -57,14 +57,14 @@
       #hovering {
         background: linear-gradient(
           315deg,
-          hsla(358, 85%, 52%, 1) 0%,
+          #e71d36 0%,
           hsla(357, 75%, 56%, 1) 100%
         );
         transition: all 0.2s;
       }
 
       #hovering:hover {
-        background: linear-gradient(315deg, #050517, #050517);
+        background: linear-gradient(315deg, #050517, #161925);
       }
     </style>
   </head>
@@ -111,7 +111,7 @@
         <img
           src="./images/sxxxx.png"
           alt="red-dress"
-          class="sm:h-[22.5rem] h-80 z-10"
+          class="sm:h-[22.5rem] h-80 -mb-9"
         />
         <div class="flex flex-col items-center self-center lg:w-[73%]">
           <p
@@ -123,112 +123,30 @@
         </div>
       </div>
       <div
-        class="w-full grid grid-cols-2 grid-rows-3 collection:flex collection:flex-row justify-evenly bg-kerem border-y-gray border-opacity-50 border-t flex-wrap items-center py-2"
-      >
-        <button class="rounded-2xl cursor-default">
-          <div
-            id="hovering"
-            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
-          >
-            <img
-              class="collection:h-6 object-cover h-10"
-              src="./collection/icons8-winter-50.png"
-            />
-            <p class="pl-3 collection:text-sm">Winter Collection</p>
-          </div>
-        </button>
-
-        <button class="rounded-2xl cursor-default">
-          <div
-            id="hovering"
-            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
-          >
-            <img
-              class="collection:h-6 object-cover h-10"
-              src="./collection/icons8-summer-64.png"
-            />
-            <p class="pl-3">Summer Collection</p>
-          </div>
-        </button>
-        <button class="rounded-2xl cursor-default">
-          <div
-            id="hovering"
-            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
-          >
-            <img
-              class="collection:h-6 object-cover h-10"
-              src="./collection/icons8-underwear-30.png"
-            />
-            <p class="pl-3">Fantastic Underwear</p>
-          </div>
-        </button>
-        <button class="rounded-2xl cursor-default">
-          <div
-            id="hovering"
-            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
-          >
-            <img
-              class="collection:h-6 object-cover h-10"
-              src="./collection/icons8-sport-62.png"
-            />
-            <p class="pl-3">Sport Collection</p>
-          </div>
-        </button>
-        <button class="rounded-2xl cursor-default">
-          <div
-            id="hovering"
-            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
-          >
-            <img
-              class="collection:h-6 object-cover h-10"
-              src="./collection/icons8-boy-48.png"
-            />
-            <p class="pl-3">Kids Collection</p>
-          </div>
-        </button>
-        <button class="rounded-2xl cursor-default">
-          <div
-            id="hovering"
-            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-8 px-4 m-2 border-none rounded-2xl relative text-gray text-sm cursor-pointer"
-          >
-            <img
-              class="collection:h-6 object-cover h-10"
-              src="./collection/icons8-new-50.png"
-            />
-            <p class="pl-3">New Collection</p>
-          </div>
-        </button>
-      </div>
-      <div
-        class="flex flex-col items-center px-2 py-4 justify-center"
+        class="relative flex flex-col items-center px-3 py-4 collection:p-6 justify-center md:grid md:grid-cols-2 md:grid-rows-1 md:gap-4"
         style="
           background: linear-gradient(
             315deg,
             hsla(358, 85%, 52%, 1) 0%,
-            hsla(357, 75%, 56%, 1) 100%
+            #e71d36 100%
           );
         "
       >
         <div
-          class="grid grid-cols-1 grid-rows-4 gap-4 w-[95%] place-content-center"
+          class="grid grid-cols-1 grid-rows-4 gap-4 w-full place-content-center"
         >
           <div
             class="flex flex-row justify-start items-center relative group overflow-hidden rounded-lg"
           >
             <img
-              class="w-full h-16 object-[0px,-28px] object-cover brightness-75 transform blur-[0.14px] group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
+              class="w-full h-16 object-[0px,-28px] object-cover brightness-75 transform blur-[0.1px] collection:h-24 sm:h-28 group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
               src="./images/arriv1.jpg"
             />
             <p
-              class="text-kerem text-xl absolute left-[1rem] font-boldfont font-normal"
+              class="text-white text-xl absolute left-[1rem] font-boldfont font-normal"
             >
               2023 Arrival
             </p>
-            <!-- <button
-              class="absolute right-4 rounded-2xl bg-white hidden group-hover:block origin-right transform"
-            >
-              hi
-            </button> -->
             <button
               title="See All"
               class="absolute right-0 translate-x-20 group-hover:-translate-x-3 rounded-2xl origin-right transform transition duration-200"
@@ -271,42 +189,248 @@
             class="flex flex-row justify-start items-center relative group overflow-hidden rounded-lg"
           >
             <img
-              class="w-full h-16 object-[0px,-30px] object-cover brightness-75 transform blur-[0.14px] group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
+              class="w-full h-16 object-[0px,-30px] object-cover brightness-75 transform blur-[0.1px] collection:h-24 sm:h-28 group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
               src="./images/arriv2.jpg"
             />
             <p
-              class="text-kerem text-xl absolute left-[1rem] font-boldfont font-normal"
+              class="text-white text-xl absolute left-[1rem] font-boldfont font-normal"
             >
               2022 Arrival
             </p>
+            <button
+              title="See All"
+              class="absolute right-0 translate-x-20 group-hover:-translate-x-3 rounded-2xl origin-right transform transition duration-200"
+            >
+              <svg
+                class="w-8 h-8 fill-current hover:opacity-70"
+                viewBox="-2.4 -2.4 28.80 28.80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0">
+                  <rect
+                    x="-2.4"
+                    y="-2.4"
+                    width="28.80"
+                    height="28.80"
+                    rx="14.4"
+                    fill="#ffffff"
+                    strokewidth="0"
+                  ></rect>
+                </g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M5 12H19M19 12L13 6M19 12L13 18"
+                    stroke="#050517"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </button>
           </div>
           <div
             class="flex flex-row justify-start items-center relative group overflow-hidden rounded-lg"
           >
             <img
-              class="w-full h-16 object-[0px,-68px] object-cover brightness-75 transform blur-[0.14px] group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
+              class="w-full h-16 object-[0px,-68px] object-cover brightness-75 transform blur-[0.1px] collection:h-24 sm:h-28 group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
               src="./images/arriv3.jpg"
             />
             <p
-              class="text-kerem text-xl absolute left-[1rem] font-boldfont font-normal"
+              class="text-white text-xl absolute left-[1rem] font-boldfont font-normal"
             >
               2021 Arrival
             </p>
+            <button
+              title="See All"
+              class="absolute right-0 translate-x-20 group-hover:-translate-x-3 rounded-2xl origin-right transform transition duration-200"
+            >
+              <svg
+                class="w-8 h-8 fill-current hover:opacity-70"
+                viewBox="-2.4 -2.4 28.80 28.80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0">
+                  <rect
+                    x="-2.4"
+                    y="-2.4"
+                    width="28.80"
+                    height="28.80"
+                    rx="14.4"
+                    fill="#ffffff"
+                    strokewidth="0"
+                  ></rect>
+                </g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M5 12H19M19 12L13 6M19 12L13 18"
+                    stroke="#050517"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </button>
           </div>
           <div
             class="flex flex-row justify-start items-center relative group overflow-hidden rounded-lg"
           >
             <img
-              class="w-full h-16 object-[0px,-43px] object-cover brightness-75 transform blur-[0.14px] group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
+              class="w-full h-16 object-[0px,-43px] object-cover brightness-75 transform blur-[0.1px] collection:h-24 sm:h-28 group-hover:blur-none group-hover:scale-125 transition duration-200 group-hover:brightness-90"
               src="./images/arriv4.jpg"
             />
             <p
-              class="text-kerem text-xl absolute left-[1rem] font-boldfont font-normal"
+              class="text-white text-xl absolute left-[1rem] font-boldfont font-normal"
             >
               2020 Arrival
             </p>
+            <button
+              title="See All"
+              class="absolute right-0 translate-x-20 group-hover:-translate-x-3 rounded-2xl origin-right transform transition duration-200"
+            >
+              <svg
+                class="w-8 h-8 fill-current hover:opacity-70"
+                viewBox="-2.4 -2.4 28.80 28.80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0">
+                  <rect
+                    x="-2.4"
+                    y="-2.4"
+                    width="28.80"
+                    height="28.80"
+                    rx="14.4"
+                    fill="#ffffff"
+                    strokewidth="0"
+                  ></rect>
+                </g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M5 12H19M19 12L13 6M19 12L13 18"
+                    stroke="#050517"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </button>
           </div>
         </div>
+        <div
+          class="hidden w-full h-[496px] md:grid grid-cols-1 grid-rows-2 gap-4"
+        >
+          <div
+            class="w-full rounded-lg overflow-hidden flex justify-center items-center"
+          >
+            <img
+              src="./images/rrrtttt.jpg"
+              class="w-full h-full object-cover"
+            />
+            <p class="absolute text-center font-boldfont text-">
+              Get 29% Off this holiday<br />
+              season using the code<br />
+              #BOOSE1F
+            </p>
+          </div>
+          <div class="bg-white w-full rounded-lg">s</div>
+        </div>
+      </div>
+      <div
+        class="w-full grid gap-2 grid-cols-3 grid-rows-2 collection:flex collection:flex-row justify-evenly bg-kerem border-y-gray border-opacity-50 border-t flex-wrap items-center p-3"
+      >
+        <button class="rounded-2xl cursor-default">
+          <div
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-4 pr-4 pl-3 border-none rounded-2xl relative text-gray text-[0.6rem] cursor-pointer"
+          >
+            <img
+              class="collection:h-6 object-cover h-5"
+              src="./collection/icons8-winter-50.png"
+            />
+            <p class="pl-2 collection:text-sm">Winter Collection</p>
+          </div>
+        </button>
+
+        <button class="rounded-2xl cursor-default">
+          <div
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-4 pr-4 pl-3 border-none rounded-2xl relative text-gray text-[0.6rem] cursor-pointer"
+          >
+            <img
+              class="collection:h-6 object-cover h-5"
+              src="./collection/icons8-summer-64.png"
+            />
+            <p class="pl-2 collection:text-sm">Summer Collection</p>
+          </div>
+        </button>
+        <button class="rounded-2xl cursor-default">
+          <div
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-4 pr-4 pl-3 border-none rounded-2xl relative text-gray text-[0.6rem] cursor-pointer"
+          >
+            <img
+              class="collection:h-6 object-cover h-5"
+              src="./collection/icons8-underwear-30.png"
+            />
+            <p class="pl-2 collection:text-sm">Fantastic Underwear</p>
+          </div>
+        </button>
+        <button class="rounded-2xl cursor-default">
+          <div
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-4 pr-4 pl-3 border-none rounded-2xl relative text-gray text-[0.6rem] cursor-pointer"
+          >
+            <img
+              class="collection:h-6 object-cover h-5"
+              src="./collection/icons8-sport-62.png"
+            />
+            <p class="pl-2 collection:text-sm">Sport Collection</p>
+          </div>
+        </button>
+        <button class="rounded-2xl cursor-default">
+          <div
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-4 pr-4 pl-3 border-none rounded-2xl relative text-gray text-[0.6rem] cursor-pointer"
+          >
+            <img
+              class="collection:h-6 object-cover h-5"
+              src="./collection/icons8-boy-48.png"
+            />
+            <p class="pl-2 collection:text-sm">Kids Collection</p>
+          </div>
+        </button>
+        <button class="rounded-2xl cursor-default">
+          <div
+            id="hovering"
+            class="h-6 flex flex-row items-center font-navfont collection:py-4 py-4 pr-4 pl-3 border-none rounded-2xl relative text-gray text-[0.6rem] cursor-pointer"
+          >
+            <img
+              class="collection:h-6 object-cover h-5"
+              src="./collection/icons8-new-50.png"
+            />
+            <p class="pl-2 collection:text-sm">New Collection</p>
+          </div>
+        </button>
       </div>
     </main>
   </body>
