@@ -9,13 +9,15 @@ module.exports = {
         lg: '1024px',
         xl: '1280px',
         'collection':'434px',
+        'offer':'1192px',
       },
     extend: {
       colors:{
         red: '#E71D36',
         blue: '#161925',
+        
         gray:'#E4D9FF',
-        kerem:'#F9F5E3',
+        kerem:'#E4D9FF',
         back:'rgba(228, 217, 255,0.7)'
       },
       fontFamily:{

@@ -60,11 +60,12 @@
           #e71d36 0%,
           hsla(357, 75%, 56%, 1) 100%
         );
-        transition: all 0.2s;
+        transition: all 0.5s;
       }
 
       #hovering:hover {
         background: linear-gradient(315deg, #050517, #161925);
+        transition: all 0.5s;
       }
     </style>
   </head>
@@ -106,12 +107,13 @@
     </nav>
     <main>
       <div
-        class="bg-gradient-to-t from-kerem to-kerem h-[385px] md:h-[390px] flex flex-row-reverse items-end justify-between relative px-[5vw] lg:pr-[17vw]"
+        class="bg-kerem h-[385px] md:h-[390px] flex flex-row-reverse items-end justify-between relative px-[5vw] lg:pr-[17vw] overflow-hidden"
+        style="box-shadow: 0px 0px 20px 3px #1619257a inset"
       >
         <img
           src="./images/sxxxx.png"
           alt="red-dress"
-          class="sm:h-[22.5rem] h-80 -mb-9"
+          class="sm:h-[22.5rem] h-80"
         />
         <div class="flex flex-col items-center self-center lg:w-[73%]">
           <p
@@ -123,14 +125,7 @@
         </div>
       </div>
       <div
-        class="relative flex flex-col items-center px-3 py-4 collection:p-6 justify-center md:grid md:grid-cols-2 md:grid-rows-1 md:gap-4"
-        style="
-          background: linear-gradient(
-            315deg,
-            hsla(358, 85%, 52%, 1) 0%,
-            #e71d36 100%
-          );
-        "
+        class="bg-kerem relative flex flex-col items-center px-3 py-4 collection:p-6 justify-center md:grid md:grid-cols-2 md:grid-rows-1 md:gap-4"
       >
         <div
           class="grid grid-cols-1 grid-rows-4 gap-4 w-full place-content-center"
@@ -343,27 +338,46 @@
             class="w-full rounded-lg overflow-hidden flex brightness-105 justify-center items-center bg-center bg-cover bg-[url('../images/rrrtttt.jpg')] row-span-2"
           >
             <div
-              class="w-11/12 h-5/6 rounded-lg border-white border-4 backdrop-brightness-90 border-solid flex items-center flex-col justify-evenly"
+              class="w-11/12 h-5/6 rounded-lg border-kerem border-4 backdrop-brightness-75 border-solid backdrop-blur-[1px] flex items-center flex-col p-3 lg:p-6 offer:p-7 justify-evenly"
             >
               <p
-                class="text-center font-boldfont leading-9 text-white lg:text-[2.5rem] lg:leading-[3.7rem] text-2xl capitalize"
+                class="text-center font-boldfont text-kerem lg:text-[2rem] offer:text-[2.5rem] text-[1.75rem] capitalize"
               >
-                Get <span class="text-blue">39%</span> OFF this holiday<br />
-                season using the code<br />
+                Get <span class="text-red">39%</span> OFF this holiday
+              </p>
+              <p
+                class="text-center font-boldfont text-kerem lg:text-[2rem] offer:text-[2.5rem] text-[1.75rem] capitalize"
+              >
+                season using the code
+              </p>
+              <p
+                class="text-center font-boldfont text-kerem lg:text-[2rem] offer:text-[2.5rem] text-[1.75rem] capitalize"
+              >
                 <span
-                  class="text-blue bg-[rgba(160,152,152,0.6)] rounded-lg py-[1.35px] px-2 border-solid border border-[rgba(22,25,37,0.6)]"
+                  class="text-red bg-[rgba(160,152,152,0.6)] rounded-lg py-[1.35px] px-2 border-solid border border-[rgba(238,82,82,0.6)]"
                   id="offer"
                   >#BOOSE1F</span
-                ><br />
+                >
+              </p>
+              <p
+                class="text-center font-boldfont text-kerem lg:text-[2rem] offer:text-[2.5rem] text-[1.75rem] capitalize"
+              >
                 And got one more chance
               </p>
-              <button class="py-2 px-8 bg-red text-white">Shopping</button>
+              <button
+                class="relative py-2 px-8 bg-kerem text-red font-boldfont rounded-lg transition-all duration-200 before:transition-all before:duration-200 before:content-[''] z-20 overflow-hidden before:-z-10 before:absolute before:top-0 before:left-0 before:h-full before:w-0 hover:before:w-full hover:text-kerem before:bg-red"
+              >
+                Shopping
+              </button>
             </div>
           </div>
         </div>
       </div>
+      <div class="flex justify-center bg-kerem p-5 pb-6 collection:pt-3">
+        <span class="w-[38vw] h-[2px] content-[''] bg-[#c5abad66]"></span>
+      </div>
       <div
-        class="w-full grid gap-2 grid-cols-3 grid-rows-2 collection:flex collection:flex-row justify-evenly bg-kerem border-y-gray border-opacity-50 border-t flex-wrap items-center p-3"
+        class="w-full grid gap-2 grid-cols-3 grid-rows-2 collection:flex collection:flex-row justify-evenly bg-kerem flex-wrap items-center p-3"
       >
         <button class="rounded-2xl cursor-default">
           <div
@@ -374,7 +388,7 @@
               class="collection:h-6 object-cover h-5"
               src="./collection/icons8-winter-50.png"
             />
-            <p class="pl-2 collection:text-sm">Winter Collection</p>
+            <p class="pl-2 collection:text-sm leading-3">Winter Collection</p>
           </div>
         </button>
 
@@ -387,7 +401,7 @@
               class="collection:h-6 object-cover h-5"
               src="./collection/icons8-summer-64.png"
             />
-            <p class="pl-2 collection:text-sm">Summer Collection</p>
+            <p class="pl-2 collection:text-sm leading-3">Summer Collection</p>
           </div>
         </button>
         <button class="rounded-2xl cursor-default">
@@ -399,7 +413,7 @@
               class="collection:h-6 object-cover h-5"
               src="./collection/icons8-underwear-30.png"
             />
-            <p class="pl-2 collection:text-sm">Fantastic Underwear</p>
+            <p class="pl-2 collection:text-sm leading-3">Fantastic Underwear</p>
           </div>
         </button>
         <button class="rounded-2xl cursor-default">
@@ -411,7 +425,7 @@
               class="collection:h-6 object-cover h-5"
               src="./collection/icons8-sport-62.png"
             />
-            <p class="pl-2 collection:text-sm">Sport Collection</p>
+            <p class="pl-2 collection:text-sm leading-3">Sport Collection</p>
           </div>
         </button>
         <button class="rounded-2xl cursor-default">
@@ -423,7 +437,7 @@
               class="collection:h-6 object-cover h-5"
               src="./collection/icons8-boy-48.png"
             />
-            <p class="pl-2 collection:text-sm">Kids Collection</p>
+            <p class="pl-2 collection:text-sm leading-3">Kids Collection</p>
           </div>
         </button>
         <button class="rounded-2xl cursor-default">
@@ -435,9 +449,685 @@
               class="collection:h-6 object-cover h-5"
               src="./collection/icons8-new-50.png"
             />
-            <p class="pl-2 collection:text-sm">New Collection</p>
+            <p class="pl-2 collection:text-sm leading-3">New Collection</p>
           </div>
         </button>
+      </div>
+      <div class="flex justify-center bg-kerem p-5 py-6">
+        <span class="w-[38vw] h-[2px] content-[''] bg-[#c5abad66]"></span>
+      </div>
+      <div
+        class="flex flex-col bg-kerem p-3 collection:p-10 md:px-20 collection:pt-0"
+      >
+        <h3
+          class="font-boldfont text-red uppercase pb-2 font-semibold text-xl md:text-[2rem] pt-3 text-center"
+        >
+          Suggested Collections
+        </h3>
+        <div
+          class="flex flex-col mt-3 md:grid md:grid-cols-1 md:grid-rows-4 md:mt-[18px] md:gap-[36px]"
+        >
+          <div
+            class="grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 w-full rounded-lg gap-2 h-[478px] md:h-[300px] p-3 bg-[rgba(238,82,82,44%)] md:p-5 md:gap-4 border-solid border-2 border-[rgba(231,29,54,0.65)]"
+          >
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/p1.jpg"
+                class="md:h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">
+                  Greenlight Dress
+                </h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Lenin</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-lime-200 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-yellow-200 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-stone-400 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    76$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/sh1.jpg"
+                class="absolute bottom-0 md:h-full md:w-full md:object-cover md:object-bottom group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">Alora Shoes</h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Brelliance</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-stone-800 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-slate-400 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-rose-300 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    115$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/t1.jpg"
+                class="md:h-full w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">
+                  Lenin Trouser
+                </h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Catoun</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-yellow-100 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-emerald-300 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-orange-300 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    97.5$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/m1.jpg"
+                class="md:h-full w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">
+                  Summery Outfit
+                </h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Lenin</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-yellow-900 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-white rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-indigo-300 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    80$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 w-full rounded-lg gap-2 h-[478px] md:h-[300px] p-3 bg-[rgba(238,82,82,44%)] md:p-5 md:gap-4 border-solid border-2 border-[rgba(231,29,54,0.65)] mt-9 md:mt-0"
+          >
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/p3.jpg"
+                class="md:h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">Party Dress</h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Thread</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-yellow-950 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-slate-900 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    68.8$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/sh2.jpg"
+                class="absolute bottom-0 md:h-full md:w-full md:object-cover md:object-bottom group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">Party Shoes</h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Brelliance</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-rose-500 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-orange-300 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-stone-300 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    124$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/t2.jpg"
+                class="md:h-full w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">
+                  Alora Trouser
+                </h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Thread</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-stone-900 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    85.5$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/m2.jpg"
+                class="md:h-full w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">Dark Outfit</h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Lenin</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-stone-800 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-slate-700 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-teal-950 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    103$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 w-full rounded-lg gap-2 h-[478px] md:h-[300px] p-3 bg-[rgba(238,82,82,44%)] md:p-5 md:gap-4 border-solid border-2 border-[rgba(231,29,54,0.65)] mt-9 md:mt-0"
+          >
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/p4.jpg"
+                class="md:h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">
+                  Empror Dress
+                </h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Satan</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-orange-500 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-purple-950 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-stone-400 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    70$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/sh3.jpg"
+                class="absolute bottom-0 md:h-full md:w-full md:object-cover md:object-bottom group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">
+                  Aloran luxury Shoes
+                </h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Brelliance</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-lime-50 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-yellow-200 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-white rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    162.55$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/t3.jpg"
+                class="md:h-full w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">
+                  Skyeblue Trouser
+                </h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">
+                  Lee / Catoun
+                </p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-slate-400 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-emerald-300 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    95.99$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/m3.jpg"
+                class="md:h-full w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">
+                  Rainy Clothe
+                </h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Thread</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-pink-400 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-rose-700 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-purple-500 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    141$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 w-full rounded-lg gap-2 h-[478px] md:h-[300px] p-3 bg-[rgba(238,82,82,44%)] md:p-5 md:gap-4 border-solid border-2 border-[rgba(231,29,54,0.65)] mt-9 md:mt-0"
+          >
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/p5.jpg"
+                class="md:h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">Seino Dress</h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Lenin</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-yellow-900 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-amber-200 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-stone-300 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    55$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/sh4.jpg"
+                class="absolute bottom-0 md:h-full md:w-full md:object-cover md:object-bottom group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">
+                  Alora Cardi Shoes
+                </h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Brelliance</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-lime-500 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-yellow-200 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-indigo-100 rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    185$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/t4.jpg"
+                class="md:h-full w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">
+                  Setla Trouser
+                </h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Catoun</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-white rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    136.2$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-cover border-[1.5px] relative overflow-hidden border-solid border-[#16192526] rounded-lg collection:bg-[-2px_-2px] group"
+            >
+              <img
+                src="./images/model/m4.jpg"
+                class="md:h-full w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+              />
+              <div
+                class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
+              >
+                <h4 class="leading-4 text-white text-[1.05rem]">Pinky Cout</h4>
+                <p class="text-[rgb(226,221,221)] text-base pb-2">Thread</p>
+                <section
+                  class="flex flex-col absolute bottom-2.5 right-2.5 sm:top-[0.8rem]"
+                >
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-pink-500 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-teal-200 rounded-full"
+                  ></div>
+                  <div
+                    class="w-4 h-4 content-[''] mt-[2px] border-solid border-[1px] border-[rgba(0,0,0,0.75)] bg-black rounded-full"
+                  ></div>
+                </section>
+                <section class="pb-2">
+                  <p
+                    class="text-red bg-[rgba(228,217,255,0.9)] px-[6px] inline-block text-base rounded-md"
+                  >
+                    177$
+                  </p>
+                </section>
+                <button
+                  type="button"
+                  class="text-[0.65rem] md:text-sm uppercase bg-red text-white py-1 rounded-md hover:brightness-150 w-3/4 sm:w-full transition duration-[0.2s]"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </body>
