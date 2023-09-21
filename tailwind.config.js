@@ -10,6 +10,7 @@ module.exports = {
         xl: '1280px',
         'collection':'434px',
         'offer':'1192px',
+        'subfav':'1225px',
       },
     extend: {
       colors:{
