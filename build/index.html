@@ -67,6 +67,10 @@
         background: linear-gradient(315deg, #050517, #161925);
         transition: all 0.5s;
       }
+
+      #email:focus + label {
+        opacity: 1;
+      }
     </style>
   </head>
   <body>
@@ -475,7 +479,7 @@
             >
               <img
                 src="./images/model/p1.jpg"
-                class="md:h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+                class="md:h-full h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
               />
               <div
                 class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
@@ -645,7 +649,7 @@
             >
               <img
                 src="./images/model/p3.jpg"
-                class="md:h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+                class="md:h-full h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
               />
               <div
                 class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
@@ -802,7 +806,7 @@
             >
               <img
                 src="./images/model/p4.jpg"
-                class="md:h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+                class="md:h-full h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
               />
               <div
                 class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
@@ -973,7 +977,7 @@
             >
               <img
                 src="./images/model/p5.jpg"
-                class="md:h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
+                class="md:h-full h-full md:object-top w-full object-cover group-hover:scale-105 transform transition-all duration-[0.4s] ease-linear group-hover:brightness-105"
               />
               <div
                 class="font-navfont absolute left-0 w-full bg-[rgba(96,96,96,47%)] bottom-0 flex flex-col justify-evenly p-2.5 font-normal backdrop-blur-[1px] backdrop-brightness-95 transform -mb-48 group-hover:mb-0 transition-all duration-[0.4s] ease-linear"
@@ -1133,11 +1137,11 @@
         <span class="w-[38vw] h-[2px] content-[''] bg-[#c5abad66]"></span>
       </div>
       <div
-        class="flex flex-col subfav:flex-row items-center p-3 bg-kerem collection:p-10 justify-between"
+        class="flex flex-col subfav:flex-row items-center p-3 bg-kerem collection:p-10 justify-between collection:pb-16 pb-14"
       >
-        <div class="flex flex-col bg-red rounded-lg overflow-hidden">
+        <div class="flex flex-col bg-white rounded-lg overflow-hidden">
           <div
-            class="flex flex-row justify-between items-baseline bg-[#f83249] px-3 py-2"
+            class="flex flex-row justify-between items-baseline bg-red px-3 py-2"
           >
             <h5 class="font-boldfont text-left text-white font-normal text-2xl">
               Fav Box
@@ -1145,7 +1149,7 @@
             <h6 class="text-sm font-boldfont text-white">Box 1</h6>
           </div>
           <div
-            class="grid grid-cols-2 grid-rows-2 h-96 overflow-hidden bg-red p-4 gap-3 rounded-lg relative"
+            class="grid grid-cols-2 grid-rows-2 h-96 overflow-hidden bg-white p-4 gap-3 rounded-lg relative"
           >
             <div
               class="w-full h-full relative flex group items-center rounded-md overflow-hidden row-span-2"
@@ -1219,23 +1223,65 @@
           class="flex flex-row subfav:w-2/4 subfav:h-[432px] h-[350px] md:h-[400px] w-full subfav:mt-0 mt-14 relative overflow-hidden rounded-lg"
         >
           <div
-            class="flex flex-col bg-rose-400 h-full w-2/3 z-30 font-navfont items-center"
+            class="text-blue flex flex-col h-full pt-6 collection:pt-0 pl-6 subfav:ml-[9%] md:ml-[12%] sm:ml-[10%] ml-[3%] collection:ml-[6%] z-30 font-boldfont items-center justify-center"
           >
-            <h3>Get The News !</h3>
-            <ul class="list-disc">
-              <li>Get Notification Of New Arrivals</li>
-              <li>Recive Offers Code !</li>
-              <li>Support Us With Subscribing</li>
+            <h3 class="text-2xl sm:text-4xl font-semibold">Get The News !</h3>
+            <ul
+              class="list-disc subfav:text-lg pt-5 pb-7 text-sm md:text-base text-left"
+            >
+              <li class="pb-2 sm:text-xl md:text-2xl text-lg">
+                Get Notification Of New Arrivals
+              </li>
+              <li class="pb-2 sm:text-xl md:text-2xl text-lg">
+                Recive Offers Code !
+              </li>
+              <li class="pb-2 sm:text-xl md:text-2xl text-lg">
+                Support Us With Subscribing
+              </li>
             </ul>
+            <form
+              action=""
+              class="flex flex-col justify-center items-center w-full"
+            >
+              <div class="relative w-full">
+                <input
+                  id="email"
+                  type="email"
+                  autocomplete="off"
+                  inputmode="email"
+                  placeholder="Enter your email"
+                  class="mb-7 w-full outline-none bg-transparent border-b-[3px] border-solid border-[rgba(22,25,37,0.7)] placeholder:text-[rgba(22,25,37,0.7)] px-1 py-1 focus:border-blue relative transition-all duration-200 pl-7"
+                />
+                <label
+                  class="absolute top-1 left-0 opacity-70 cursor-pointer transition-all duration-200"
+                  for="email"
+                >
+                  <img src="./images/icons8-email-24 (1).png" />
+                </label>
+              </div>
+              <button
+                type="submit"
+                class="w-3/4 bg-blue text-white rounded-lg py-2 hover:opacity-95 transition-all duration-150 outline outline-[3px] -outline-offset-[3px] outline-blue hover:outline-offset-4"
+              >
+                Subscribe
+              </button>
+            </form>
           </div>
           <img
             src="./images/subimg.jpg"
             alt="sub-pic"
-            class="w-full h-full object-cover absolute top-0 left-0 transform"
+            class="w-full h-full object-cover absolute top-0 right-0 object-[-70px,0px] collection:object-center transform"
             style="transform: rotateY(180deg)"
           />
         </div>
       </div>
     </main>
+    <footer class="h-96 relative flex flex-row">
+      <img
+        src="./images/Footer-pic.jpg"
+        alt="Footer-pic"
+        class="w-full h-full absolute right-0 top-0 object-cover brightness-[0.4] sm:object-top"
+      />
+    </footer>
   </body>
 </html>
