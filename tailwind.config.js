@@ -16,9 +16,8 @@ module.exports = {
       colors:{
         red: '#E71D36',
         blue: '#161925',
-        
         gray:'#E4D9FF',
-        kerem:'#E4D9FF',
+        kerem:'#F4DBD8',
         back:'rgba(228, 217, 255,0.7)'
       },
       fontFamily:{
